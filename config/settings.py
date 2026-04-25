@@ -7,7 +7,7 @@ import os
 CONFIG_FILE = os.path.join(os.path.dirname(__file__), "config.json")
 
 DEFAULTS = {
-    "ruta_base": r"H:\Mi unidad\00-Analista Contable\00-Clientes",
+    "ruta_base": "",
     "honorario_base": 25475.00,
     "honorario_base_mes": "2025-07",
     "meses_inactividad": 12,
