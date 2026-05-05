@@ -277,7 +277,7 @@ def detectar_huerfanos(carpeta: str, años: int = 3) -> list[dict]:
     """
     Detecta archivos no modificados en los últimos X años.
     """
-    limite = datetime.now() - timedelta(days=años * 365)
+    limite = datetime.now() - timedelta(days=años * 365.25)
     huerfanos = []
 
     for f in Path(carpeta).rglob("*"):

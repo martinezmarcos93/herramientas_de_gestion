@@ -422,7 +422,12 @@ class App(ctk.CTk):
                 messagebox.showerror("Error","Seleccioná una carpeta válida.")
                 return
             try:
-                res = archivos.detectar_huerfanos(carpeta, años_var.get())
+                años = años_var.get()
+            except Exception:
+                messagebox.showerror("Error", "Ingresá un número entero de años válido.")
+                return
+            try:
+                res = archivos.detectar_huerfanos(carpeta, años)
                 for item in res:
                     tree.insert("","end", values=(
                         item["nombre"], item["años_inactivo"],
